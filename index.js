@@ -6,32 +6,42 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = (names, sortNames) => {
-  const list = [];
-  let display = sortNames(names);
+//const sorter = (names, sortNames) => {
+  //const list = [];
+  //let display = sortNames(names);
   
-  for (let a = 0; a < display.length; a++) {
-    b = a + 1 + "." + display[a];
-    list.push(b);
-  }
+  //for (let a = 0; a < display.length; a++) {
+   // b = a + 1 + "." + display[a];
+    //list.push(b);
+ // }
 
-  return list;
-}
+  //return list;
+//}
+const sorter = (names, sortType) => {
+  const sortData = sortType(names);
+  const sortNames = [];
+  for (let i = 0; i < sortData.length; i++) {
+    sortNames[i] = `${i + 1}. ${sortData[i]}`;
+  }
+  return sortNames;
+};
   
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = (names) => {
-  let c = names.sort((a, b) => (a > b ? 1 : -1));
-  return c;
-};
+//const sortAscending = (names) => {
+  //let c = names.sort((a, b) => (a > b ? 1 : -1));
+  //return c;
+//};
+const sortAscending = (names) => names.sort();
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = (names) => {
-  let d = names.sort((a, b) => (a > b ? -1 : 1));
-  return d;
-};
+//const sortDescending = (names) => {
+  //let d = names.sort((a, b) => (a > b ? -1 : 1));
+  //return d;
+//};
+const sortDescending= (names) => names.reverse();
 
 // ! JANGAN DIMODIFIKASI
 (function main() {
