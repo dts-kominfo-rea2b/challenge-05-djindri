@@ -10,9 +10,9 @@ const sorter = (names, sortNames) => {
   const list = [];
   let display = sortNames(names);
   
-  for (let x = 0; x < display.length; x++) {
-    y = x + 1 + "." + display[x];
-    list.push(y);
+  for (let a = 0; a < display.length; a++) {
+    b = a + 1 + "." + display[a];
+    list.push(b);
   }
 
   return list;
@@ -22,15 +22,15 @@ const sorter = (names, sortNames) => {
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
 const sortAscending = (names) => {
-  let sA = names.sort((x, y) => (x > y ? 1 : -1));
-  return sA;
+  let c = names.sort((a, b) => (a > b ? 1 : -1));
+  return c;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
 const sortDescending = (names) => {
-  let sD = names.sort((x, y) => (x > y ? -1 : 1));
-  return sD;
+  let d = names.sort((a, b) => (a > b ? -1 : 1));
+  return d;
 };
 
 // ! JANGAN DIMODIFIKASI
